@@ -1,0 +1,10 @@
+/* MessagesComponent's private CSS styles */
+
+body {
+  margin: 2em;
+}
+
+.msg{
+  font-size: 20px;
+  color: rgb(45, 45, 45);
+}

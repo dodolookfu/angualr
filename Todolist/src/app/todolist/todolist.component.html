@@ -1,0 +1,46 @@
+<section class="todoapp">
+  <header class="header">
+	  <h1>Todolist</h1>
+    <input
+      class="new-todo"
+      placeholder="What needs to be done?"
+      autofocus
+      [(ngModel)]="newTodo"
+      (keyup.enter)="addTodo()">
+  </header>
+  
+  <section class="main">
+    <ul class="todo-list">
+      <li *ngFor="let todo of todos" [class.editing]="todo.editModel" [class.completed]="todo.done">
+        <div class="view">          
+          <input class="toggle" type="checkbox" (click)="changeDone(todo.id)" [checked]="todo.done">
+          <label (dblclick)="edit(todo)">第{{todo.id}}項 {{todo.content}}</label>        
+          <button class="destroy" (click)="remove(todo.id)"></button>
+        </div>
+        <input
+          *ngIf="todo.editModel"
+          type="text"  
+          class="edit"          
+          #editedtodo            
+          [value]="todo.content"
+          (blur)="update(todo, editedtodo.value)"
+          (keyup.enter)="update(todo, editedtodo.value)"
+          (keyup.escape)="cancelEditing(todo)"
+        >
+      </li>     
+    </ul>
+  </section>
+  
+  <footer class="footer">
+    <span class="todo-count">
+      <strong>{{ getListLen() }}</strong>  
+      {{ getListLen().length ? 'item' : 'items'}} left    
+    </span>
+    <ul class="filters">
+      <li><a href="javascript:void(0);" (click)="getAllList()">全部事項</a></li>
+      <li><a href="javascript:void(0);" (click)="getTodoList()">代辦事項</a></li>
+      <li><a href="javascript:void(0);" (click)="getDoneList()">完成事項</a></li>
+    </ul>
+  </footer>
+</section>
+

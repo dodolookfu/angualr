@@ -1,0 +1,27 @@
+<h2>HEROES LIST</h2>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+<!-- (click)="onSelect(hero)"  [class.selected]="hero === selectedHero"-->
+<div class="text-center">
+  <div>
+    <label>
+      <input class="form-control" placeholder="input Hero name" #heroName type="text" />
+    </label>
+    &nbsp;
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="btn btn-info" (click)="add(heroName.value); heroName.value=''">
+      新增
+    </button>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">      
+      <div class="row">
+        <div class="col-md-6">
+          <span class="badge">{{hero.id}}. {{hero.name}}</span>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-danger" title="delete hero" (click)="delete(hero)">刪除</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

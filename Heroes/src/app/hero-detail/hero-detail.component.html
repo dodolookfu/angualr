@@ -1,0 +1,14 @@
+<h2>Hero Detail</h2>
+<div *ngIf="hero">
+  <div class="m-5">
+    <h2>英雄編號：{{hero.id}}</h2>
+    <h2>英雄名稱：{{hero.name | uppercase }}</h2>
+  </div>
+  <div class="m-5">修改名稱：
+    <!-- [(ngModel)] need a formsModule NG的雙向綁定 -->
+    <input type="text" class="form-control" [(ngModel)]="hero.name" placeholder="name">
+  </div>
+  <button class="btn btn-info m-1" (click)=save()>儲存英雄資料</button>
+  <br/>
+  <button class="btn btn-info m-1" (click)="goBack()">返回英雄列表</button> 
+</div>

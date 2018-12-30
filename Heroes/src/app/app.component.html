@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main" style="text-align:center">  
+    <!-- <img src="../favicon.ico" alt="angular" width="25px" height="25px"> &nbsp;-->    
+    <h1 class="index-title" style="display:inline;">{{ title }}</h1>
+  <nav class="navbar nav-justified nav-style m-2">
+    <span class="nav-item" routerLink="/dashboard">Dashboard</span>
+    &nbsp;
+    <span class="nav-item" routerLink="/heroes">Heroes</span>
+  </nav>
+  <!-- <app-heroes></app-heroes> -->
+  <div class="layout mb-2">
+    <p>
+      <router-outlet style="height:100%"></router-outlet>
+    </p> 
+    <p>
+      <app-messages></app-messages>
+    </p> 
+  </div> 
+</div>
+
+
+

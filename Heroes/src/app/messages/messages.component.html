@@ -1,0 +1,12 @@
+
+<div>
+    <div>
+        <h2 class="title">System Messages</h2>        
+        <button class="btn btn-danger mb-5" (click)="messageService.clear()">Clear Messages</button>
+    </div>    
+    <div *ngIf="messageService.message.length">    
+        <div class="msg" *ngFor='let message of messageService.message'>
+            {{message}} 
+        </div>  
+    </div>
+</div>

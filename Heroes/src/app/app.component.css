@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft JhengHei';
+}
+
+.main{
+  min-height: 600px; 
+  width: 900px;
+  background-color: rgb(255, 215, 93);
+  border-radius: 10px; 
+  box-shadow: 7px 7px 0px 5px rgba(0, 0, 0, 0.2)
+}
+
+.layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+}
+
+.layout > * {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  
+  
+}
+
+.layout p > * {
+  height: 100%;
+}
+
+
+.nav-style{
+  height: 50px;
+  font-size: 30px;
+  color: #EBECED;
+  font-weight: bold;
+  background-color: #9A0958;
+}
+
+.nav-style > *{
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.nav-style > *:hover{
+  background-color: rgb(109, 14, 66);  
+  color: rgb(255, 203, 255);
+}

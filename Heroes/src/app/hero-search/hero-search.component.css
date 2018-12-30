@@ -1,0 +1,45 @@
+/* HeroSearch private styles */
+
+div ul {
+  display: inline-block;
+}
+
+input{
+  width: 80%;
+  display: inline-block;
+}
+
+.search-result li {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    width: 300px;
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+    list-style-type: none;
+  }
+  
+  .search-result li:hover {
+    background-color: rgb(52, 131, 170);
+  }
+  
+  .search-result li div {
+    color: rgb(75, 75, 75);
+    display: block;
+    text-decoration: none;
+  }
+  
+  .search-result li div:hover {
+    color: white;
+  }
+  .search-result li div:active {
+    color: white;
+  }
+  
+  
+  
+  ul.search-result {
+    margin-top: 0;
+    padding-left: 0;
+  }
